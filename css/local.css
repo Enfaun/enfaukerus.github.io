@@ -25,3 +25,18 @@ body {
   padding-top: 16px;
   background-color: #008080;
 }
+
+#minimized {
+  position: fixed;
+  width: 200px;
+  left: 110px;
+  bottom: 30px;
+}
+
+details > summary::marker {
+    content: "[+] ";
+}
+
+details[open] > summary::marker {
+    content: "[-] ";
+}

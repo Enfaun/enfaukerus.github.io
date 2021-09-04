@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8"/>
   <link rel="icon" href="./assets/icon.png" />
   <link rel="stylesheet" href="./css/98.css" />
   <link rel="stylesheet" href="./css/local.css" />
@@ -10,6 +11,7 @@
       <div class="title-bar">
         <div class="title-bar-text"><div class="icon"></div>EnfauKerus</div>
         <div class="title-bar-controls">
+          <button aria-label="Minimize" id="minimize"></button>
           <button aria-label="Close" id="close"></button>
         </div>
       </div>
@@ -17,7 +19,6 @@
         <p>he/him, internet furry, college student</p>
         <p>Studying CompSci.<br>
         Sometimes doing art<br>
-        Proud Linux user
         </p>
         <p>
         Links:<br>
@@ -25,6 +26,15 @@
           - <a href="https://github.com/EnfauKerus" target="_blank">GitHub</a><br>
           - <a href="https://honk.enfa.uk" target="_blank">Honk instance</a>
         </p>
+        <details>
+          <summary>More</summary>
+            <br>
+              <div class="field-row-stacked">
+                <label for="gpg">GPG fingerprint</label>
+                <textarea readonly id="gpg" rows="2" style="width: 100%; resize: none">736E 6039 6FEC A3E0 193B &#13;&#10;58C7 DE59 01B5 82D9 CB32</textarea>
+              </div>
+        </details>
+        <br>
         <section class="field-row" style="justify-content: flex-end;">
           <a href="mailto:kerus@enfa.uk"><button>Send Mail</button></a>
         </section>
@@ -32,6 +42,15 @@
       <div class="status-bar">
         <p class="status-bar-field">Created w/ notepad</p>
         <p class="status-bar-field">&amp; 98.css</p>
+      </div>
+    </div>
+    <div hidden class="window" id="minimized" style="display: none">
+      <div class="title-bar">
+        <div class="title-bar-text"><div class="icon"></div>EnfauKerus</div>
+        <div class="title-bar-controls">
+          <button aria-label="Restore" id="restore"></button>
+          <button aria-label="Close" id="closeMinimized"></button>
+        </div>
       </div>
     </div>
   </body>
