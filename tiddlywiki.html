@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/config/AnimationDuration</li>
 
+<li>$:/config/AutoSave</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
@@ -181,9 +183,17 @@ Error message and password prompt
 
 <li>$:/palette</li>
 
+<li>$:/plugins/tiddlywiki/blog</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
+
+<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/async</li>
+
+<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/aws</li>
+
+<li>$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/blog</li>
 
 <li>$:/state/http-requests</li>
 
@@ -227,8 +237,6 @@ Error message and password prompt
 
 <li>$:/view</li>
 
-<li>Draft of 'New Tiddler'</li>
-
 </ul>
 </p>
 
@@ -243,6 +251,7 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 <script class="tiddlywiki-tiddler-store" type="application/json">[
 {"created":"20240124111522576","title":"$:/config/AnimationDuration","text":"0","modified":"20240124111522576"},
+{"created":"20240124111753893","creator":"Enfaun","title":"$:/config/AutoSave","text":"yes","modified":"20240124111800352","modifier":"Enfaun"},
 {"created":"20240124111059094","text":"hide","title":"$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel","modified":"20240124111059094"},
 {"created":"20240124110259724","creator":"Enfaun","text":"hide","title":"$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home","modified":"20240124111642785","modifier":"Enfaun"},
 {"created":"20240124110255385","text":"hide","title":"$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/layout","modified":"20240124110419139"},
@@ -262,20 +271,24 @@ Error message and password prompt
 {"created":"20240124105601285","title":"$:/GitHub/Username","text":"Enfaun","modified":"20240124105602138"},
 {"title":"$:/isEncrypted","text":"no"},
 {"created":"20240124110431563","title":"$:/palette","text":"$:/palettes/ContrastLight","modified":"20240124111429542"},
+{"title":"$:/plugins/tiddlywiki/blog","name":"Blog","description":"Blog publishing tools","list":"readme docs","version":"5.3.3","plugin-type":"plugin","dependents":"","type":"application/json","text":"{\"tiddlers\":{\"$:/plugins/tiddlywiki/blog/docs\":{\"title\":\"$:/plugins/tiddlywiki/blog/docs\",\"text\":\"Until there's more documentation, see an example of the use of this plugin here:\\n\\n* Blog: http://jermolene-blog.github.io/\\n* Repository: https://github.com/Jermolene-blog/blog\\n\"},\"$:/plugins/tiddlywiki/blog/readme\":{\"title\":\"$:/plugins/tiddlywiki/blog/readme\",\"text\":\"This plugin contains tools to help publish blogs:\\n\\n* Templates and tools for building static HTML pages and posts\\n\"},\"$:/plugins/tiddlywiki/blog/templates/html-page/page\":{\"title\":\"$:/plugins/tiddlywiki/blog/templates/html-page/page\",\"text\":\"\\\\define tv-wikilink-template() posts/$uri_doubleencoded$.html\\n\\\\define tv-config-toolbar-icons() no\\n\\\\define tv-config-toolbar-text() no\\n\\\\define tv-config-toolbar-class() tc-btn-invisible\\n`\u003C!doctype html>\\n\u003Chtml>\\n\u003Chead>\\n\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html;charset=utf-8\\\" />\\n\u003Cmeta name=\\\"generator\\\" content=\\\"TiddlyWiki\\\" />\\n\u003Cmeta name=\\\"tiddlywiki-version\\\" content=\\\"`{{$:/core/templates/version}}`\\\" />\\n\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\" />\\n\u003Cmeta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\" />\\n\u003Cmeta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\" />\\n\u003Cmeta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\"/>\\n\u003Cmeta name=\\\"format-detection\\\" content=\\\"telephone=no\\\">\\n\u003Clink id=\\\"faviconLink\\\" rel=\\\"shortcut icon\\\" href=\\\"favicon.ico\\\">\\n\u003Clink rel=\\\"stylesheet\\\" href=\\\"static.css\\\">\\n\u003Ctitle>`\u003C$transclude field=\\\"caption\\\">\u003C$view field=\\\"title\\\"/>\u003C/$transclude>: {{$:/core/wiki/title}}`\u003C/title>\\n\u003C/head>\\n\u003Cbody class=\\\"tc-body\\\">\\n`{{$:/StaticBanner||$:/core/templates/html-tiddler}}`\\n\u003Csection class=\\\"tc-story-river\\\">\\n`\u003C$importvariables filter={{$:/core/config/GlobalImportFilter}}>\\n\u003C$view tiddler=\\\"$:/plugins/tiddlywiki/blog/templates/tiddler\\\" format=\\\"htmlwikified\\\"/>\\n\u003C/$importvariables>`\\n\u003C/section>\\n\u003C/body>\\n\u003C/html>\\n`\\n\"},\"$:/plugins/tiddlywiki/blog/templates/html-page/post\":{\"title\":\"$:/plugins/tiddlywiki/blog/templates/html-page/post\",\"text\":\"\\\\define tv-wikilink-template() /$uri_doubleencoded$.html\\n\\\\define tv-config-toolbar-icons() no\\n\\\\define tv-config-toolbar-text() no\\n\\\\define tv-config-toolbar-class() tc-btn-invisible\\n`\u003C!doctype html>\\n\u003Chtml>\\n\u003Chead>\\n\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html;charset=utf-8\\\" />\\n\u003Cmeta name=\\\"generator\\\" content=\\\"TiddlyWiki\\\" />\\n\u003Cmeta name=\\\"tiddlywiki-version\\\" content=\\\"`{{$:/core/templates/version}}`\\\" />\\n\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\" />\\n\u003Cmeta name=\\\"apple-mobile-web-app-capable\\\" content=\\\"yes\\\" />\\n\u003Cmeta name=\\\"apple-mobile-web-app-status-bar-style\\\" content=\\\"black-translucent\\\" />\\n\u003Cmeta name=\\\"mobile-web-app-capable\\\" content=\\\"yes\\\"/>\\n\u003Cmeta name=\\\"format-detection\\\" content=\\\"telephone=no\\\">\\n\u003Clink id=\\\"faviconLink\\\" rel=\\\"shortcut icon\\\" href=\\\"../favicon.ico\\\">\\n\u003Clink rel=\\\"stylesheet\\\" href=\\\"../static.css\\\">\\n\u003Ctitle>`\u003C$transclude field=\\\"caption\\\">\u003C$view field=\\\"title\\\"/>\u003C/$transclude>: {{$:/core/wiki/title}}`\u003C/title>\\n\u003C/head>\\n\u003Cbody class=\\\"tc-body\\\">\\n`{{$:/StaticBanner||$:/core/templates/html-tiddler}}`\\n\u003Csection class=\\\"tc-story-river\\\">\\n`\u003C$importvariables filter={{$:/core/config/GlobalImportFilter}}>\\n\u003C$view tiddler=\\\"$:/plugins/tiddlywiki/blog/templates/tiddler\\\" format=\\\"htmlwikified\\\"/>\\n\u003C$view tiddler=\\\"$:/plugins/tiddlywiki/blog/templates/menu\\\" format=\\\"htmlwikified\\\"/>\\n\u003C/$importvariables>`\\n\u003C/section>\\n\u003C/body>\\n\u003C/html>\\n`\\n\"},\"$:/plugins/tiddlywiki/blog/templates/menu\":{\"title\":\"$:/plugins/tiddlywiki/blog/templates/menu\",\"text\":\"\u003Cdiv class=\\\"tc-blog-menu\\\">\\n\\n\u003Cdiv class=\\\"tc-blog-menu-item\\\">\\n\\n\u003Ca href=\\\"../index.html\\\">\\n\\n{{$:/core/images/home-button}}\\n\\n\u003C/a>\\n\\n\u003C/div>\\n\\n\u003C/div>\\n\"},\"$:/plugins/tiddlywiki/blog/templates/tiddler\":{\"title\":\"$:/plugins/tiddlywiki/blog/templates/tiddler\",\"text\":\"\u003Cdiv class=\\\"tc-tiddler-frame tc-tiddler-view-frame\\\">\\n\\n\u003Cdiv class=\\\"tc-tiddler-title\\\">\\n\\n\u003Cdiv class=\\\"tc-titlebar\\\">\\n\\n\u003Ch2 class=\\\"tc-title\\\">\\n\\n\u003C$transclude field=\\\"caption\\\" mode=\\\"inline\\\">\\n\\n\u003C$view field=\\\"title\\\"/>\\n\\n\u003C/$transclude>\\n\\n\u003C/h2>\\n\\n\u003C/div>\\n\\n\u003C/div>\\n\\n\u003Cdiv class=\\\"tc-subtitle\\\">\\n\\n\u003C$view field=\\\"modified\\\" format=\\\"date\\\" template=\\\"DDth MMM YYYY\\\"/>\\n\\n\u003C/div>\\n\\n\u003Cdiv class=\\\"tc-tiddler-body\\\">\\n\\n\u003C$transclude/>\\n\\n\u003C/div>\\n\\n\u003C/div>\\n\"}}}"},
 {"created":"20240124105119027","title":"$:/SiteSubtitle","text":"powered by TiddlyWiki","modified":"20240124105122632"},
 {"created":"20240124105112533","title":"$:/SiteTitle","text":"Enfaun's quicklog","modified":"20240124105114904"},
+{"created":"20240124111808064","creator":"Enfaun","title":"$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/async","text":"no","modified":"20240124111813956","modifier":"Enfaun"},
+{"created":"20240124111812756","creator":"Enfaun","title":"$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/aws","text":"no","modified":"20240124111820490","modifier":"Enfaun"},
+{"created":"20240124111822818","creator":"Enfaun","title":"$:/state/add-plugin-info/$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.3.3/index.html/$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.3.3/index.html/$:/plugins/tiddlywiki/blog","text":"yes","modified":"20240124111822818","modifier":"Enfaun"},
 {"title":"$:/state/http-requests","text":"0"},
 {"created":"20240124111444340","title":"$:/state/sidebar","text":"yes","modified":"20240124111444904"},
 {"created":"20240124111157752","creator":"Enfaun","title":"$:/state/tab--1963855381","text":"$:/core/ui/ControlPanel/Palette","modified":"20240124111721624","modifier":"Enfaun"},
-{"created":"20240124110828760","title":"$:/state/tab--708812420","text":"$:/core/ui/ControlPanel/Plugins/Add/Themes","modified":"20240124110828760"},
-{"created":"20240124110643830","title":"$:/state/tab--86143343","text":"$:/core/ui/ControlPanel/Plugins/Installed/Themes","modified":"20240124110848222"},
-{"created":"20240124105150914","creator":"Enfaun","title":"$:/state/tab-1749438307","text":"$:/core/ui/ControlPanel/Plugins","modified":"20240124111724200","modifier":"Enfaun"},
-{"created":"20240124105201418","title":"$:/state/tab-2065006209","text":"$:/core/ui/ControlPanel/Saving/GitHub","modified":"20240124105201418"},
+{"created":"20240124110828760","creator":"Enfaun","title":"$:/state/tab--708812420","text":"$:/core/ui/ControlPanel/Plugins/Add/Plugins","modified":"20240124111805450","modifier":"Enfaun"},
+{"created":"20240124110643830","creator":"Enfaun","title":"$:/state/tab--86143343","text":"$:/core/ui/ControlPanel/Plugins/Installed/Languages","modified":"20240124111745213","modifier":"Enfaun"},
+{"created":"20240124105150914","creator":"Enfaun","title":"$:/state/tab-1749438307","text":"$:/core/ui/ControlPanel/Settings","modified":"20240124111915060","modifier":"Enfaun"},
+{"created":"20240124105201418","creator":"Enfaun","title":"$:/state/tab-2065006209","text":"$:/core/ui/ControlPanel/Saving/GitHub","modified":"20240124111911376","modifier":"Enfaun"},
 {"created":"20240124110246680","title":"$:/state/tab/sidebar--595412856","text":"$:/core/ui/SideBar/Open","modified":"20240124111317830"},
 {"created":"20240124111216126","creator":"Enfaun","title":"$:/state/tabs/controlpanel/toolbars-1345989671","text":"$:/core/ui/ControlPanel/Toolbars/EditorToolbar","modified":"20240124111716554","modifier":"Enfaun"},
 {"title":"$:/status/RequireReloadDueToPluginChange","text":"no"},
 {"created":"20240124111600803","creator":"E","title":"$:/status/UserName","text":"Enfaun","modified":"20240124111601398","modifier":"Enfau"},
-{"title":"$:/StoryList","created":"20240124111727740","creator":"Enfaun","text":"","list":"[[Draft of 'New Tiddler']] $:/ControlPanel","modified":"20240124111733888","modifier":"Enfaun"},
+{"title":"$:/StoryList","created":"20240124111727740","creator":"Enfaun","text":"","list":"","modified":"20240124111923325","modifier":"Enfaun"},
 {"created":"20240124111649164","creator":"Enfaun","title":"$:/tags/PageControls","list":"$:/core/ui/Buttons/home $:/core/ui/Buttons/new-journal $:/core/ui/Buttons/close-all $:/core/ui/Buttons/fold-all $:/core/ui/Buttons/unfold-all $:/core/ui/Buttons/permaview $:/core/ui/Buttons/new-tiddler $:/core/ui/Buttons/new-image $:/core/ui/Buttons/import $:/core/ui/Buttons/export-page $:/core/ui/Buttons/control-panel $:/core/ui/Buttons/advanced-search $:/core/ui/Buttons/manager $:/core/ui/Buttons/tag-manager $:/core/ui/Buttons/language $:/core/ui/Buttons/palette $:/core/ui/Buttons/theme $:/core/ui/Buttons/layout $:/core/ui/Buttons/storyview $:/core/ui/Buttons/encryption $:/core/ui/Buttons/timestamp $:/core/ui/Buttons/full-screen $:/core/ui/Buttons/print $:/core/ui/Buttons/save-wiki $:/core/ui/Buttons/refresh $:/core/ui/Buttons/network-activity $:/core/ui/Buttons/more-page-actions","modified":"20240124111649424","modifier":"Enfaun"},
 {"created":"20240124110500934","title":"$:/theme","text":"$:/themes/tiddlywiki/centralised","modified":"20240124111156640"},
 {"title":"$:/themes/tiddlywiki/centralised","name":"Centralised","author":"JeremyRuston","core-version":">=5.0.0","plugin-type":"theme","description":"Centralises the story river","dependents":"$:/themes/tiddlywiki/snowwhite","version":"5.3.3","type":"application/json","text":"{\"tiddlers\":{\"$:/themes/tiddlywiki/centralised/styles.tid\":{\"title\":\"$:/themes/tiddlywiki/centralised/styles.tid\",\"tags\":\"[[$:/tags/Stylesheet]]\",\"text\":\"\\\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\\n\\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\\n\\n\\thtml .tc-page-container {\\n\\t\\ttext-align: center;\\n\\t}\\n\\n\\thtml .tc-story-river {\\n\\t\\tposition: relative;\\n\\t\\twidth: 770px;\\n\\t\\tpadding: 42px;\\n\\t\\tmargin: 0 auto;\\n\\t\\ttext-align: left;\\n\\t}\\n\\n\\thtml .tc-sidebar-scrollable {\\n\\t\\ttext-align: left;\\n\\t\\tleft: 50%;\\n\\t\\tright: 0;\\n\\t\\tmargin-left: 343px;\\n\\t}\\n}\\n\"}}}"},
@@ -284,8 +297,7 @@ Error message and password prompt
 {"created":"20240124111304892","title":"$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth","text":"260px","modified":"20240124111353603"},
 {"created":"20240124111242800","title":"$:/themes/tiddlywiki/vanilla/options/sidebarlayout","text":"fixed-fluid","modified":"20240124111539233"},
 {"created":"20240124111251500","title":"$:/themes/tiddlywiki/vanilla/options/stickytitles","text":"yes","modified":"20240124111259148"},
-{"created":"20240124111437808","title":"$:/view","text":"zoomin","modified":"20240124111530256"},
-{"text":"","draft.title":"New Tiddler","tags":"","created":"20240124111511580","title":"Draft of 'New Tiddler'","draft.of":"New Tiddler","modified":"20240124111512368"}
+{"created":"20240124111437808","title":"$:/view","text":"zoomin","modified":"20240124111530256"}
 ]</script><div id="storeArea" style="display:none;"></div>
 <!--~~ Library modules ~~-->
 <div id="libraryModules" style="display:none;">
